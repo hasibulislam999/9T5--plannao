@@ -1,0 +1,47 @@
+{
+  "cSpell.words": [
+    "daisyui",
+    "Hasib",
+    "Hasibul",
+    "middlewares",
+    "mytheme",
+    "noopener",
+    "noreferrer",
+    "pids",
+    "Plannao",
+    "reduxjs",
+    "signin",
+    "skillnao",
+    "swipeable",
+    "tailwindcss",
+    "Trnx",
+    "একাডেমিক",
+    "প্রফেশনাল",
+    "সংক্রান্ত",
+    "সেকশান"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
