@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  textarea,
+  select,
+  select[multiple] {
+    @apply border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500 focus:ring-2 w-full;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply text-green-500 focus:border-green-500 focus:ring-green-500 h-5 w-5;
+  }
+  [type="checkbox"] {
+    @apply rounded;
+  }
+}
+
+.btn-primary {
+  @apply px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-secondary transition-all hover:px-6 disabled:text-gray-300 disabled:border-gray-300 disabled:hover:px-4 disabled:hover:bg-transparent disabled:cursor-not-allowed font-semibold;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 border border-secondary text-secondary rounded-md hover:bg-secondary hover:text-primary transition-all hover:px-6 disabled:text-gray-300 disabled:border-gray-300 disabled:hover:px-4 disabled:hover:bg-transparent disabled:cursor-not-allowed font-semibold;
+}
