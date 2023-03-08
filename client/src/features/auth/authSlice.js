@@ -17,8 +17,13 @@ export const getMe = createAsyncThunk("auth/getMe", async (token) => {
   });
   const data = await res.json();
 
+  console.log(data);
+
   if (data?.acknowledgement) {
     return data?.data;
+  } else {
+    localStorage.removeItem("accessToken");
+    window.location.reload();
   }
 });
 
