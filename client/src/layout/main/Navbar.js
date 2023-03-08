@@ -33,24 +33,30 @@ const Navbar = () => {
     );
   }
 
-
   return (
     <section className="bg-[#298770] lg:py-0 py-2">
       <div className="container mx-auto lg:px-0 px-4 py-2">
         <div className="flex lg:justify-between md:justify-between lg:items-center md:items-center lg:flex-row md:flex-row flex-col lg:gap-0 gap-y-2">
           {/* logo */}
           <Link to="/" title="Go to home">
-            <img src="logo.svg" alt="logo" loading="lazy" className="w-40 lg:mx-0 md:mx-0 mx-auto" />
+            <img
+              src="logo.svg"
+              alt="logo"
+              loading="lazy"
+              className="w-40 lg:mx-0 md:mx-0 mx-auto"
+            />
           </Link>
 
           {/* nav items */}
           <div className="flex lg:gap-x-4 md:gap-x-4 lg:flex-row md:flex-row flex-col gap-y-4 items-center">
-            <Link
-              to="/dashboard"
-              className="font-bold text-white hover:text-secondary"
-            >
-              ড্যাশবোর্ড
-            </Link>
+            {user?.role === "admin" && (
+              <Link
+                to="/dashboard"
+                className="font-bold text-white hover:text-secondary"
+              >
+                ড্যাশবোর্ড
+              </Link>
+            )}
             <div
               className="font-bold text-white flex items-center relative hover:text-secondary"
               ref={menuRef}
