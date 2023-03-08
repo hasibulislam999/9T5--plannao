@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGetPackageQuery } from "../../features/package/packageApi";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { setPackage } from "../../features/package/packageSlice";
+import PackageModal from "../../components/modals/PackageModal";
 
 const Detail = () => {
   const { id } = useParams();
@@ -10,6 +13,7 @@ const Detail = () => {
   const [toggle, setToggle] = useState("trainer");
   const [purposeAccordion, setPurposeAccordion] = useState(false);
   const [structureAccordion, setStructureAccordion] = useState(false);
+  const dispatch = useDispatch();
 
   if (isFetching) {
     return (
@@ -156,7 +160,10 @@ const Detail = () => {
             <div className="flex flex-col gap-y-4 my-5">
               {/* mendatory */}
               <div className="text-center">
-                <button className="btn-secondary w-full">
+                <button
+                  className="btn-secondary w-full"
+                  onClick={() => dispatch(setPackage(mentor))}
+                >
                   এখনই অর্ডার করুন
                 </button>
               </div>
@@ -164,6 +171,8 @@ const Detail = () => {
           </div>
         </div>
       </div>
+
+      {<PackageModal />}
     </section>
   );
 };
