@@ -21,9 +21,6 @@ export const getMe = createAsyncThunk("auth/getMe", async (token) => {
 
   if (data?.acknowledgement) {
     return data?.data;
-  } else {
-    localStorage.removeItem("accessToken");
-    window.location.reload();
   }
 });
 

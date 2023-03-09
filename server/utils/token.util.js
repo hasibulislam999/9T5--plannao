@@ -16,10 +16,7 @@ exports.getToken = (data) => {
       contactNumber: data.contactNumber,
       role: data.role,
     },
-    process.env.TOKEN_SECRET,
-    {
-      expiresIn: process.env.DURATION_EXPIRY,
-    }
+    process.env.TOKEN_SECRET
   );
 
   return token;
