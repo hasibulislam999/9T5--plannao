@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "plannao_client",
+  "homepage": "https://client.plannao.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
