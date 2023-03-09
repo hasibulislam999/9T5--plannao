@@ -23,7 +23,7 @@ const app = express();
 /* middlewares connections */
 app.use(
   cors({
-    origin: "https://client.plannao.com",
+    origin: "http://localhost:3000",
     methods: "GET,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
